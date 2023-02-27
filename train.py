@@ -1,5 +1,6 @@
 import joblib
 import argparse
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -50,7 +51,9 @@ def run(data_path: str, model_output_path: str):
 
     # Store the model
     print("Storing the final model...")
-    joblib.dump(final_cl, model_output_path)
+    path = Path(model_output_path)
+    path.parent.mkdir(exist_ok=True)
+    joblib.dump(final_cl, path)
 
 
 if __name__ == "__main__":
