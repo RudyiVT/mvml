@@ -16,7 +16,7 @@ python train.py --train_data_path 'data/train.csv' --model_output_path 'models/m
 ![Pipeline](pipe.png)
 
 
-## To run app to interact with a model
+## Run an interactive app with an integrated model
 ```shell
 gradio app.py
 ```
